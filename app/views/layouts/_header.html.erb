@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to 'Simple AirBnB', flats_path, class:"navbar-brand" %>
+
+  <%= form_tag flats_path,class:'form-inline', method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class:'form-control mr-sm-2',
+    placeholder: 'search a flat'%>
+    <%= submit_tag "Search", class:'btn btn-outline-success my-2 my-sm-0' %>
+    <% end %>
+</nav>

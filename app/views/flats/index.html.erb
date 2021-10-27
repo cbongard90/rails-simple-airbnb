@@ -1,0 +1,17 @@
+<h1>All our Flats(<%= @flats.size %>)</h1>
+<%= link_to 'Add a new Flat', new_flat_path, class:'btn btn-success' %>
+<div class="container flat-grid">
+  <% @flats.each do |flat| %>
+    <div class="card flat-grid-items">
+      <%= image_tag flat.picture_url , class:"card-img-top img-tile"%>
+      <div class="card-header">
+        <%= flat.name %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">$<%= flat.price_per_night %></h5>
+        <p class="card-text"><%= flat.description.first(50) unless flat.description.nil? %>...</p>
+        <%= link_to 'More Info', flat_path(flat), class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

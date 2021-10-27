@@ -1,0 +1,19 @@
+<%= image_tag @flat.picture_url, id:"flat-background" %>
+<h1><%= @flat.name %></h1>
+<p><%= @flat.address %></p>
+
+
+<h2>A bit more about this flat</h2>
+<p><%= @flat.description %></p>
+
+<h2>Details</h2>
+<p>Maximum number of guests:<%= @flat.number_of_guests %></p>
+<p>Price:$<%= @flat.price_per_night %></p>
+
+
+<%= link_to 'Edit flat', edit_flat_path(@flat), class:'btn btn-warning' %>
+<%= link_to 'Delete flat', flat_path(@flat),
+method: :delete,
+data: { confirm: "Are you sure?"},
+class: "btn btn-danger" %>
+<%= link_to 'Go back', flats_path, class:'btn btn-primary' %>

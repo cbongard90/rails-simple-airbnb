@@ -1,5 +1,4 @@
-<h1>All our Flats(<%= @flats.size %>)</h1>
-<%= link_to 'Add a new Flat', new_flat_path, class:'btn btn-success' %>
+<h1 class="m-4">All our Flats(<%= @flats.size %>)</h1>
 <div class="container flat-grid">
   <% @flats.each do |flat| %>
     <div class="card flat-grid-items">

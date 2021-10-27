@@ -1,6 +1,10 @@
 <nav class="navbar navbar-dark bg-dark">
-  <%= link_to 'Simple AirBnB', flats_path, class:"navbar-brand" %>
-
+  <div class='d-flex'>
+    <%= link_to 'Simple AirBnB', flats_path, class:"navbar-brand" %>
+    <div class="nav-item">
+      <%= link_to 'Add a new Flat', new_flat_path, class:'btn btn-outline-success' %>
+    </div>
+  </div>
   <%= form_tag flats_path,class:'form-inline', method: :get do %>
   <%= text_field_tag :query,
     params[:query],

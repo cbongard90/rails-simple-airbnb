@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :find_flat, except: :index
+  before_action :find_flat, except: %i[index new create]
 
   def index
     if params[:query].present?
